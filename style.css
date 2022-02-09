@@ -1,0 +1,18 @@
+html,
+body {
+  height: 100%;
+}
+.hm-gradient,
+html {
+  background: linear-gradient(to top, rgb(255, 186, 186) 0%, #ffeded 99%, #ffffff 100%);
+}
+.navbar-brand{
+  color: #9E9E9E;
+  font-weight: 700;
+}
+.darken-grey-text {
+  color: #2e2e2e;
+}
+.danger-text {
+  color: #ff3547;
+}
