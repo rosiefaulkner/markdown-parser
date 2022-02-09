@@ -4,7 +4,7 @@ body {
 }
 .hm-gradient,
 html {
-  background: linear-gradient(to top, rgb(255, 186, 186) 0%, #ffeded 99%, #ffffff 100%);
+  background: linear-gradient(to top, rgb(255, 255, 255) 0%, #7696bc 99%, #6d8ddf 100%);
 }
 .navbar-brand{
   color: #9E9E9E;
@@ -13,6 +13,13 @@ html {
 .darken-grey-text {
   color: #2e2e2e;
 }
-.danger-text {
-  color: #ff3547;
+.primary-text {
+  color: #4384F3;
+}
+.output{
+    background: #F7F7F9;
+    border: none;
+    outline: 0;
+    width: 100%;
+    padding: 2rem;
 }

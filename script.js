@@ -1,4 +1,8 @@
-document.querySelector("button").onclick = function(){
-    document.querySelector("textarea").select();
-    document.execCommand('copy');
-  };
+// Copy HTML content to clipboard
+function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+  }
