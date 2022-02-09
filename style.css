@@ -4,7 +4,7 @@ body {
 }
 .hm-gradient,
 html {
-  background: linear-gradient(to top, rgb(255, 255, 255) 0%, #7696bc 99%, #6d8ddf 100%);
+  background: #4384F3;
 }
 .navbar-brand{
   color: #9E9E9E;
@@ -27,5 +27,7 @@ html {
     height: 300px;
     max-height: 300px;
     overflow-y: scroll;
-    background: rgb(168, 194, 246);
+}
+.markdown-card{
+    margin-bottom: 200px;
 }
