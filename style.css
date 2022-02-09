@@ -23,3 +23,9 @@ html {
     width: 100%;
     padding: 2rem;
 }
+#markdown-output{
+    height: 300px;
+    max-height: 300px;
+    overflow-y: scroll;
+    background: rgb(168, 194, 246);
+}

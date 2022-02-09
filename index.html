@@ -51,18 +51,18 @@
                   </h2>
                   <div class="md-form">
                     <i class="fa fa-tag prefix grey-text"></i>
-                    <input type="text" id="form321" class="form-control" />
-                    <label for="form341">Title</label>
+                    <input type="text" id="title" class="form-control" />
+                    <label for="title">Title</label>
                   </div>
                   <div class="md-form">
                     <i class="fa fa-pencil prefix grey-text"></i>
                     <textarea
                       type="text"
-                      id="form81"
+                      id="markdown"
                       class="md-textarea"
                       style="height: 100px"
                     ></textarea>
-                    <label for="form81">Input your markdown content</label>
+                    <label for="markdown">Input your markdown content</label>
                   </div>
                   <div class="text-center">
                     <button
@@ -94,11 +94,26 @@
                       <button
                         type="button"
                         class="btn btn-primary waves-effect waves-light"
-                        onclick="copyToClipboard('#copy-html')">
+                        onclick="copyToClipboard('#copy-html')"
+                      >
                         Copy
                       </button>
+                      <a
+                        href="https://github.com/rosiefaulkner/markdown-parser"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <button
+                          type="button"
+                          class="btn btn-primary waves-effect waves-light"
+                        >
+                          Github
+                        </button></a
+                      >
                     </div>
+                    <div id="markdown-output">
                     <p id="copy-html">THIS IS THE OUTPUT</p>
+                    </div>
                   </div>
                 </div>
                 <!-- Form Output -->
