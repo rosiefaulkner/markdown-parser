@@ -1,4 +1,14 @@
 <?php
+/**
+* ParseMarkdown is a PHP class that parses a 
+* markdown input, converts it into HTML, and 
+* returns HTML.
+*
+* @author     Rosie Faulkner
+* @version    1.0.0
+*
+*/
+
 require_once('input.html');
 
 class ParseMarkdown
