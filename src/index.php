@@ -1,22 +1,20 @@
 <?php
-/**
-* ParseMarkdown is a PHP class that parses a 
-* markdown input, converts it into HTML, and 
-* returns HTML.
-*
-* @author     Rosie Faulkner
-* @version    1.0.0
-*
-*/
 
-require_once('input.html');
+/**
+ * ParseMarkdown is a PHP class that parses a
+ * markdown input, converts it into HTML, and
+ * returns HTML.
+ *
+ * @author     Rosie Faulkner
+ * @version    1.0.0
+ *
+ */
 
 class ParseMarkdown
 {
     /**
-     * regexRules
-     * Defines regex characters to replace
-     * @return array
+     * Defines regex characters to replace markdown
+     * @var array
      */
     public static $regex = [
         '/\n(#+)(.*)/' => 'self::headerLevels',                                 // Headings
@@ -24,6 +22,17 @@ class ParseMarkdown
         '/\n([^\n]+)/' => 'self::unformattedText',                              // Unformatted text
         '^(?:[\t ]*(?:\r?\n|\r))+' => '',                                       // Blank lines (ignored)                                                            // blank line
     ];
+
+    public function __construct()
+    {
+        $html = '';
+        if (isset($_POST['markdown'])) {
+            $html = self::converToHtml($_POST['markdown']);
+        }
+        ob_start();
+        require_once('input.html');
+        ob_end_clean();
+    }
 
     /**
      * headerLevels
@@ -83,3 +92,4 @@ class ParseMarkdown
         return trim($markdownText);
     }
 }
+$parseMarkdown = new ParseMarkdown();

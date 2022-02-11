@@ -19,7 +19,7 @@
     <!-- Logo and text -->
     <nav class="navbar bg-light">
       <a class="navbar-brand" href="#">
-        <img src="/inc/trademark.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+        <img src="/img/trademark.png" width="30" height="30" class="d-inline-block align-top" alt="" />
         Rosie Faulkner
       </a>
     </nav>
@@ -74,12 +74,7 @@
                   </div>
                   <div id="markdown-output">
                     <p id="copy-html">
-                      <?php
-                      if (isset($_POST['markdown'])) {
-                        $parseMarkdown = new ParseMarkdown();
-                        echo $parseMarkdown::converToHtml($_POST['markdown']);
-                      }
-                      ?>
+                      {{ html }}
                     </p>
                   </div>
                 </div>
@@ -92,15 +87,15 @@
     </div>
   </main>
   <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
   <!-- Popper library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" defer></script>
   <!-- Bootstrap JS -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js" defer></script>
   <!-- Scripts -->
-  <script src="/js/script.js"></script>
+  <script src="/js/script.js" defer></script>
 </body>
 
-</html>';
+</html>
