@@ -1,3 +1,20 @@
+/**
+ * style.css
+ * These are the styles for the card components.
+ *
+ * Index
+ * - HTML and Body CSS
+ * - Navbar
+ * - Card Style
+ * - Text Color
+ */
+ 
+ /**
+ * HTML and Body CSS
+ *
+ * Modifies the height and background colors
+ *
+ */
 html,
 body {
   height: 100%;
@@ -6,30 +23,17 @@ body {
 html {
   background: #4384F3;
 }
+
+ /**
+ * Navbar
+ *
+ * Modifies the color and weight of logo font
+ * Defines the height and width of logo and icon
+ *
+ */
 .navbar-brand{
   color: #9E9E9E;
   font-weight: 700;
-}
-.darken-grey-text {
-  color: #2e2e2e;
-}
-.primary-text {
-  color: #4384F3;
-}
-.output{
-    background: #F7F7F9;
-    border: none;
-    outline: 0;
-    width: 100%;
-    padding: 2rem;
-}
-#markdown-output{
-    height: 400px;
-    max-height: 500px;
-    overflow-y: scroll;
-}
-.markdown-card{
-    margin-bottom: 200px;
 }
 .rf-logo{
   height: 30px;
@@ -37,4 +41,41 @@ html {
 }
 .icon{
   height: 100px;
+}
+
+/**
+ * Card Style
+ *
+ * Modifies the background color and
+ * dimensions of markdown cards
+ *
+ */
+ .output{
+  background: #F7F7F9;
+  border: none;
+  outline: 0;
+  width: 100%;
+  padding: 2rem;
+}
+#markdown-output{
+  height: 400px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.markdown-card{
+  margin-bottom: 200px;
+}
+
+
+/**
+ * Text Color
+ *
+ * Defines text colors
+ *
+ */
+.darken-grey-text {
+  color: #2e2e2e;
+}
+.primary-text {
+  color: #4384F3;
 }

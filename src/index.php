@@ -40,7 +40,7 @@ class ParseMarkdown
      * @param array
      * @return string
      */
-    private static function headerLevels($regs): string
+    private static function headerLevels(array $regs): string
     {
         // Assigns arguments to list: $fullString = original string, $hashtag = heading hashtags, $headerText = heading text
         list($fullString, $hashTag, $headerText) = $regs;
@@ -55,7 +55,7 @@ class ParseMarkdown
      * @param array
      * @return string
      */
-    private static function hyperLinks($regs): string
+    private static function hyperLinks(array $regs): string
     {
         list($fullString, $linkedText, $domain) = $regs;
         return sprintf('<a href="%s">%s</a>', $domain, trim($linkedText));
@@ -68,7 +68,7 @@ class ParseMarkdown
      * @param array
      * @return string
      */
-    private static function unformattedText($regs): string
+    private static function unformattedText(array $regs): string
     {
         return sprintf("\n<p>%s</p>\n", trim($regs[1]));
     }
@@ -80,7 +80,7 @@ class ParseMarkdown
      * Replaces regex with replacement from $regexRules
      * @return array
      */
-    public static function converToHtml($markdownText): string
+    public static function converToHtml(string $markdownText): string
     {
         $markdownText = "\n" . $markdownText . "\n";
         foreach (self::$regex as $regexPattern => $replacementHtml) {
