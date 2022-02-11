@@ -47,7 +47,7 @@ $parseMarkdown::parseMarkdown('######Hello World')
 # returns '<p>Hello World</p>'
 $parseMarkdown::parseMarkdown('Hello World')
 
-# returns '<a href="https://www.example.com)Link Text</a>">'
+# returns '<a href="https://www.example.com>Link Text</a>">'
 $parseMarkdown::parseMarkdown('[Link text](https://www.example.com)')
 
 # returns ' '
