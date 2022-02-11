@@ -25,10 +25,12 @@ class ParseMarkdown
 
     public function __construct()
     {
-        $html = isset($_POST['markdown']) ? self::converToHtml($_POST['markdown']) : '';
-        ob_start();
-        require('input.html');
-        return str_replace('{{ html }}', $html, ob_end_flush());
+        $markdown = isset($_POST['markdown']) ? $_POST['markdown'] : '';
+        $html = $markdown ? self::converToHtml($markdown) : '';
+        $output = file_get_contents('input.html');
+        $output = str_replace('{{ markdown }}', $markdown, $output);
+        $output = str_replace('{{ html }}', $html, $output);
+        echo $output;
     }
 
     /**
