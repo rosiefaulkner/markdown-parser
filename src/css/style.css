@@ -24,10 +24,17 @@ html {
     padding: 2rem;
 }
 #markdown-output{
-    height: 300px;
-    max-height: 300px;
+    height: 400px;
+    max-height: 500px;
     overflow-y: scroll;
 }
 .markdown-card{
     margin-bottom: 200px;
+}
+.rf-logo{
+  height: 30px;
+  width: 30px;
+}
+.icon{
+  height: 100px;
 }

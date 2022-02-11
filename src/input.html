@@ -26,13 +26,15 @@
     <main>
       <!-- Logo and text -->
       <nav class="navbar bg-light">
-        <a class="navbar-brand" href="#">
+        <a
+          class="navbar-brand"
+          href="https://github.com/rosiefaulkner"
+          target="_blank"
+        >
           <img
             src="/img/trademark.png"
-            width="30"
-            height="30"
-            class="d-inline-block align-top"
-            alt=""
+            class="d-inline-block align-top rf-logo"
+            alt="rf-logo"
           />
           Rosie Faulkner
         </a>
@@ -54,14 +56,15 @@
                     Markdown to HTML Converter
                   </h2>
                   <div class="md-form">
-                    <i class="fa fa-pencil prefix grey-text"></i>
+                    <em class="fa fa-pencil prefix grey-text"></em>
                     <textarea
                       type="text"
                       name="markdown"
                       id="markdown"
-                      class="md-textarea"
-                      style="height: 100px"
-                    >{{ markdown }}</textarea>
+                      class="md-textarea icon"
+                    >
+{{ markdown }}</textarea
+                    >
                     <label for="markdown">Input your markdown content</label>
                   </div>
                   <div class="text-center">
@@ -113,7 +116,7 @@
                       >
                     </div>
                     <div id="markdown-output">
-                      <p id="copy-html">{{ html }}</p>
+                      <div id="copy-html">{{ html }}</div>
                     </div>
                   </div>
                 </div>
@@ -148,6 +151,6 @@
       defer
     ></script>
     <!-- Scripts -->
-    <script src="/js/script.js" defer></script>
+    <script async src="/js/script.js"></script>
   </body>
 </html>
