@@ -78,7 +78,7 @@ class ParseMarkdown
      * Uses markdown input from form field
      * Applies foreach loop that checks if $regexRules have a function defined for parsing
      * Replaces regex with replacement from $regexRules
-     * @return array
+     * @return string
      */
     public static function converToHtml(string $markdownText): string
     {
