@@ -1,7 +1,6 @@
 <?php
 
-require('./src/inc/Parser.php');
-
+namespace Rosiefaulkner\MarkdownToHtml\Inc;
 class ParserTest extends \PHPUnit\Framework\TestCase
 {
 
@@ -23,7 +22,7 @@ class ParserTest extends \PHPUnit\Framework\TestCase
             ['##### Hello', '<h5>Hello</h5>'],
             ['###### Hello', '<h6>Hello</h6>'],
             ['Hello', '<p>Hello</p>'],
-            // ['[Duck Duck Go](https://duckduckgo.com)', '<a href="https://duckduckgo.com">Duck Duck Go</a>'],
+            ['[Duck Duck Go](https://duckduckgo.com)', '<a href="https://duckduckgo.com">Duck Duck Go</a>'],
         ];
     }
 }
