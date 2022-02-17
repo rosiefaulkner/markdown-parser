@@ -6,7 +6,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Rosiefaulkner\\MarkdownToHtml\\": "src/"
+            "Rosiefaulkner\\MarkdownToHtml\\": "src/",
+            "Rosiefaulkner\\MarkdownToHtml\\Inc\\": "src/inc"
         }
     },
     "authors": [
