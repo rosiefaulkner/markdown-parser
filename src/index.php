@@ -12,4 +12,4 @@
 
 require "../vendor/autoload.php";
 
-new Rosiefaulkner\MarkdownToHtml\Inc\Parser();
+new Rosiefaulkner\MarkdownToHtml\Parser();

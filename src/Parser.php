@@ -1,6 +1,6 @@
 <?php
 
-namespace Rosiefaulkner\MarkdownToHtml\Inc;
+namespace Rosiefaulkner\MarkdownToHtml;
 
 class Parser
 {
