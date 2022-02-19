@@ -2,7 +2,7 @@
 
 ### Markdown To HTML is a PHP class written to make converting markdown syntax to HTML simple and fast.
 
-[Check it out in action here](https://markdown-parser-to-html.herokuapp.com/)
+:point_right: [Check it out in action here](https://markdown-parser-to-html.herokuapp.com/)
 
 ![interface-image-inputs](https://i.ibb.co/XkqrxcG/Screen-Shot-2022-02-19-at-2-11-04-AM.png)
 
