@@ -12,6 +12,10 @@
             "Rosiefaulkner\\MarkdownToHtml\\": "src/"
         }
     },
+    "post-install-cmd": [
+        "php artisan clear-compiled",
+        "chmod -R 777 src/"
+    ],
     "authors": [
         {
             "name": "Rosie Faulkner",
