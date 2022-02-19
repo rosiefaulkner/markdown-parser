@@ -19,7 +19,8 @@ class Parser
     public function __construct()
     {
         $markdown = isset($_POST['markdown']) ? $_POST['markdown'] : '';
-        $html = $markdown ? self::converToHtml($markdown) : '';
+        $noInput = '##Oops. You didn\'t enter any markdown...';
+        $html = $markdown ? self::converToHtml($markdown) : self::converToHtml($noInput);
         $output = file_get_contents('input.html');
         $output = str_replace('{{ markdown }}', $markdown, $output);
         $output = str_replace('{{ html }}', $html, $output);
