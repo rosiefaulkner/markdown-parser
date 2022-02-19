@@ -4,6 +4,9 @@
     "require-dev": {
         "phpunit/phpunit": "^9.5"
     },
+    "require":{
+        
+    },
     "autoload": {
         "psr-4": {
             "Rosiefaulkner\\MarkdownToHtml\\": "src/"
