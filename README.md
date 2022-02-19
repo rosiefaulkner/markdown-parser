@@ -54,6 +54,9 @@ $parseMarkdown::parseMarkdown('Hello World')
 # returns '<a href="https://www.example.com">Link Text</a>'
 $parseMarkdown::parseMarkdown('[Link text](https://www.example.com)')
 
+# returns '<img src="https://www.example.com/image.png" alt="image-alt-text"></img>'
+$parseMarkdown::parseMarkdown('![title/alt text](https://www.example.com/image.png)')
+
 # returns ' '
 $parseMarkdown::parseMarkdown('Blank Line')
 

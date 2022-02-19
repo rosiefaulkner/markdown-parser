@@ -10,9 +10,10 @@ class Parser
      */
     public static $regex = [
         '/\n(#+)(.*)/' => 'self::headerLevels',                                 // Headings
-        '/\[([^]]*)\] *\(([^)]*)\)/i' => 'self::hyperLinks',                    // Hyperlinks
+        //'/\[([^]]*)\] *\(([^)]*)\)/i' => 'self::hyperLinks',                    // Hyperlinks
         '/\n([^\n]+)/' => 'self::unformattedText',                              // Unformatted text
         '^(?:[\t ]*(?:\r?\n|\r))+' => '',                                       // Blank lines (ignored)                                                            // blank line
+        '/(!)*\[([^\]]+)\]\(([^\)]+?)(?: &quot;([\w\s]+)&quot;)*\)/' => 'self::linkOrImages',                // Images
     ];
 
     public function __construct()
@@ -42,18 +43,6 @@ class Parser
     }
 
     /**
-     * hyperLinks
-     * Identifies hyperlink markdown and replaces with HTML links
-     * @param array
-     * @return string
-     */
-    private static function hyperLinks(array $regs): string
-    {
-        list($fullString, $linkedText, $domain) = $regs;
-        return sprintf('<a href="%s">%s</a>', $domain, trim($linkedText));
-    }
-
-    /**
      * unformattedText
      * Identifies unformmatted text and adds <p> tags and new line
      * If unformatted text is in in an ordered/unordered list, for example, <p> tags are still applied
@@ -63,6 +52,20 @@ class Parser
     private static function unformattedText(array $regs): string
     {
         return sprintf("\n<p>%s</p>\n", trim($regs[1]));
+    }
+
+    /**
+     * linkOrImages
+     * Identifies hyperlink and image markdown and
+     * replaces with HTML tags for hyperlinks or images depending
+     * on the presence of '!' prior to the link in markdown input
+     * @param array
+     * @return string
+     */
+    private static function linkOrImages(array $regs)
+    {
+        list($fullString, $tagIdentifier, $linkedText, $domain) = $regs;
+        return $tagIdentifier === '!' ? sprintf('<img src="%s" alt="%s"></img>', $domain, trim($linkedText)) : sprintf('<a href="%s">%s</a>', $domain, trim($linkedText));
     }
 
     /**
