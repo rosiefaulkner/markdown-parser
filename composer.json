@@ -5,7 +5,7 @@
         "phpunit/phpunit": "^9.5"
     },
     "require":{
-        
+        "php": "8.0.14"
     },
     "autoload": {
         "psr-4": {
