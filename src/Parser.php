@@ -9,11 +9,10 @@ class Parser
      * @var array
      */
     public static $regex = [
-        '/\n(#+)(.*)/' => 'self::headerLevels',                                 // Headings
-        //'/\[([^]]*)\] *\(([^)]*)\)/i' => 'self::hyperLinks',                    // Hyperlinks
-        '/\n([^\n]+)/' => 'self::unformattedText',                              // Unformatted text
-        '^(?:[\t ]*(?:\r?\n|\r))+' => '',                                       // Blank lines (ignored)                                                            // blank line
-        '/(!)*\[([^\]]+)\]\(([^\)]+?)(?: &quot;([\w\s]+)&quot;)*\)/' => 'self::linkOrImages',                // Images
+        '/\n(#+)(.*)/' => 'self::headerLevels',                                                              // Headings
+        '/\n([^\n]+)/' => 'self::unformattedText',                                                           // Unformatted text
+        '^(?:[\t ]*(?:\r?\n|\r))+' => '',                                                                    // Blank lines (ignored)                                                                                            // blank line
+        '/(!)*\[([^\]]+)\]\(([^\)]+?)(?: &quot;([\w\s]+)&quot;)*\)/' => 'self::linkOrImages',                // Images & Links
     ];
 
     public function __construct()
